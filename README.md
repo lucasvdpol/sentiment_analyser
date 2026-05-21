@@ -1,27 +1,28 @@
+Hier is de vertaalde versie van je README, met aandacht voor de juiste structuur en opmaak:
 YouTube Sentiment & Analytics Pipeline
-Project Overview
+Projectoverzicht
 
-This project involved developing an automated data pipeline designed to ingest, process, and analyze YouTube video data. The system was engineered to run autonomously on a recurring schedule, building a longitudinal database of video performance metrics and audience sentiment over time.
-Objective
+Dit project omvatte de ontwikkeling van een geautomatiseerde datapipeline, ontworpen om YouTube-videodata binnen te halen, te verwerken en te analyseren. Het systeem is gebouwd om autonoom te draaien op een vast schema, waardoor er een longitudinale database wordt opgebouwd met prestatiegegevens en het publieke sentiment over tijd.
+Doelstelling
 
-The goal was to move from raw data ingestion to actionable insights by building a robust ETL (Extract, Transform, Load) pipeline that provides a daily snapshot of video performance and viewer sentiment.
-The Pipeline Workflow
+Het doel was om te komen van ruwe datainjestie naar bruikbare inzichten door een robuuste ETL-pipeline (Extract, Transform, Load) te bouwen. Deze pipeline biedt dagelijks een overzicht van de prestaties van video's en het bijbehorende sentiment van kijkers.
+De Workflow van de Pipeline
 
-The project was executed in four distinct phases:
--Data Ingestion: Developed a service to communicate with the YouTube API. This component fetches metadata (views, likes, comments, etc.) for target videos and           stores them in a relational database.
--Transcription: Integrated OpenAI Whisper to perform automated speech-to-text conversion on video content.
--Sentiment Analysis: Built and trained a classification model to analyze the transcripts, determining the underlying sentiment of the video content.
--Automation & Integration: Encapsulated the entire pipeline within Docker containers. The system was configured to run as a nightly job, ensuring the database           maintained an accurate historical record of daily metric changes.
+Het project werd uitgevoerd in vier verschillende fasen:
+-Datainjestie: Ontwikkeling van een service die communiceert met de YouTube API. Deze component haalt metadata op (views, likes, reacties, etc.) voor specifieke video's en slaat deze op in een relationele database.
+-Transcriptie: Integratie van OpenAI Whisper om automatisch spraak-naar-tekst-conversie uit te voeren op de videocontent.
+-Sentimentanalyse: Ontwikkeling en training van een classificatiemodel om de transcripten te analyseren en het sentiment van de videocontent te bepalen.
+-Automatisering & Integratie: Het inkapselen van de volledige pipeline in Docker-containers. Het systeem is geconfigureerd om als een nachtelijke taak te draaien, waardoor de database een accuraat historisch overzicht van de dagelijkse metrieken behoudt.
 
-Architecture
+Architectuur
 
-The system is built to be scalable and maintainable:
-    Database: PostgreSQL (used for storing historical metadata and analytical results).
-    Processing: Python-based ETL scripts for data transformation.
-    Infrastructure: Docker & Docker Compose for containerized deployment.
-    Automation: Orchestrated via cron to ensure daily execution.
-    Visualization: All processed data was aggregated and visualized through a dedicated dashboard (providing clear insights into sentiment trends over time).
+Het systeem is gebouwd om schaalbaar en onderhoudbaar te zijn:
+-Database: PostgreSQL (gebruikt voor het opslaan van historische metadata en analytische resultaten).
+-Processing: Op Python gebaseerde ETL-scripts voor datatransformatie.
+-Infrastructuur: Docker & Docker Compose voor container-gebaseerde deployment.
+-Automatisering: Georkestreerd via cron om dagelijkse uitvoering te garanderen.
+-Visualisatie: Alle verwerkte data werd samengevoegd en gevisualiseerd via een dedicated dashboard, wat duidelijke inzichten geeft in sentimenttrends over tijd.
 
 Status
 
-Note: This project was developed as part of an educational curriculum. While the production environment on the school server is currently inactive, the architectural design is modular and ready for deployment on cloud infrastructure (e.g., AWS, GCP, or Azure).
+Let op: Dit project is ontwikkeld als onderdeel van een onderwijscurriculum. Hoewel de productieomgeving op de schoolserver momenteel niet actief is, is het architecturale ontwerp modulair en direct inzetbaar op cloud-infrastructuur (zoals AWS, GCP of Azure).
