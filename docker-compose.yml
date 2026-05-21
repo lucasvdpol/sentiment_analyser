@@ -1,0 +1,15 @@
+services:
+  prod:
+    container_name: s1156206-db-logger
+    image: ghcr.io/s1156206/data-advanced:latest
+    volumes:
+      - /data/video:/app/youtube:ro
+    ports:
+      - "8888:8888"
+    environment:
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      API_KEY: ${API_KEY}

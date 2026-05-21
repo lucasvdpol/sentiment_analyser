@@ -1,0 +1,11 @@
+psycopg2-binary
+moviepy
+google-api-python-client
+requests
+yt_dlp
+isodate
+pandas
+pypickle
+scikit-learn
+numpy
+SQLAlchemy

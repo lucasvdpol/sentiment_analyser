@@ -1,0 +1,10 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+*.log
+/data/video
+/videos
+docker-compose.yml

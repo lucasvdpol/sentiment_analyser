@@ -1,0 +1,15 @@
+#stages:
+#  - build-and-push
+#
+#build-and-push:
+#  image: docker:24.0.5
+#  stage: build-and-push
+#  services:
+#    - docker:24.0.5-dind
+#  script:
+#    - docker build -t s1156206-db-logger:latest .
+#    - docker tag s1156206-db-logger:latest ghcr.io/s1156206/data-advanced:latest
+#    - echo $GHCR_KEY | docker login ghcr.io -u s1156206 --password-stdin
+#    - docker push ghcr.io/s1156206/data-advanced:latest
+#
+#
