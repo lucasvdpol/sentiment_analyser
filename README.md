@@ -1,4 +1,3 @@
-Hier is de vertaalde versie van je README, met aandacht voor de juiste structuur en opmaak:
 YouTube Sentiment & Analytics Pipeline
 Projectoverzicht
 
